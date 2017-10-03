@@ -1,0 +1,10 @@
+[package]
+name = "xdo_serial"
+version = "0.1.0"
+authors = ["liv <liv.dumea@gmail.com>"]
+
+[dependencies]
+serial = "0.4.0"
+bufstream = "0.1.3"
+mio = "0.6.10"
+libxdo-sys = "0.11.0"

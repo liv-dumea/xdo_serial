@@ -205,6 +205,35 @@ impl XDo {
             delay_microsecs,
         ))
     }
+
+    pub fn get_window_name(&self) -> Result<String, OpError> {
+        let buff = Box::new(255);
+        let ret_name = &mut Box::into_raw(buff);
+        let mut len = 255;
+        let ret_len = &mut len;
+        let mut t = 0;
+        let ret_type = &mut t;
+        let mut active_window = 0;
+        let active_window_ref = &mut active_window;
+        xdo!(sys::xdo_get_active_window(self.handle, active_window_ref))?;
+        xdo!(sys::xdo_get_window_name(
+            self.handle,
+            *active_window_ref,
+            ret_name,
+            ret_len,
+            ret_type,
+        ))?;
+        let mut res = String::new();
+        unsafe {
+            let cstr = CString::from_raw((*ret_name) as *mut i8);
+            let str = cstr.into_string();
+            match str {
+                Ok(s) => res = s,
+                _ => {}
+            }
+        }
+        Ok(res)
+    }
 }
 
 impl Drop for XDo {

@@ -27,6 +27,135 @@ fn main() {
     }
 }
 
+fn when_youtube_tv(xdo: &XDo, res: &str) {
+    if res == "cc" {
+        let _res = xdo.send_keysequence("F11", 0);
+    }
+    if res == "cp" {
+        let _res = xdo.send_keysequence("Up", 0);
+    }
+    if res == "cn" {
+        let _res = xdo.send_keysequence("Down", 0);
+    }
+
+    if res == "c<" {
+        let _res = xdo.send_keysequence("j", 0);
+    }
+    if res == "c>" {
+        let _res = xdo.send_keysequence("l", 0);
+    }
+    if res == "c#" {
+        let _res = xdo.send_keysequence("k", 0);
+    }
+    if res == "c-" {
+        let _res = xdo.send_keysequence("XF86AudioLowerVolume", 0);
+    }
+    if res == "c+" {
+        let _res = xdo.send_keysequence("XF86AudioRaiseVolume", 0);
+    }
+    if res == "c=" {
+        let _res = xdo.send_keysequence("Return", 0);
+    }
+    if res == "c0" {
+        let _res = xdo.send_keysequence("super", 0);
+    }
+    if res == "ch" {
+        let _res = xdo.send_keysequence("super+shift+Tab", 0);
+    }
+    if res == "ct" {
+        let _res = xdo.send_keysequence("super+Tab", 0);
+    }
+    if res == "c2" {
+        let _res = xdo.send_keysequence("Up", 0);
+    }
+    if res == "c8" {
+        let _res = xdo.send_keysequence("Down", 0);
+    }
+    if res == "c4" {
+        let _res = xdo.send_keysequence("Left", 0);
+    }
+    if res == "c6" {
+        let _res = xdo.send_keysequence("Right", 0);
+    }
+    if res == "c5" {
+        let _res = xdo.send_keysequence("Return", 0);
+    }
+    if res == "c1" {
+        let _res = xdo.send_keysequence("Escape", 0);
+    }
+    if res == "c3" {
+        let _res = xdo.send_keysequence("s", 0);
+    }
+    if res == "c9" {
+        let _res = xdo.send_keysequence("g", 0);
+    }
+    if res == "c7" {
+        let _res = xdo.send_keysequence("BackSpace", 0);
+    }
+}
+fn when_kodi(xdo: &XDo, res: &str) {
+    if res == "cc" {
+        let _res = xdo.send_keysequence("backslash", 0);
+    }
+    if res == "cp" {
+        let _res = xdo.send_keysequence("Next", 0);
+    }
+    if res == "cn" {
+        let _res = xdo.send_keysequence("Next", 0);
+    }
+
+    if res == "c<" {
+        let _res = xdo.send_keysequence("comma", 0);
+    }
+    if res == "c>" {
+        let _res = xdo.send_keysequence("period", 0);
+    }
+    if res == "c#" {
+        let _res = xdo.send_keysequence("space", 0);
+    }
+    if res == "c-" {
+        let _res = xdo.send_keysequence("XF86AudioLowerVolume", 0);
+    }
+    if res == "c+" {
+        let _res = xdo.send_keysequence("XF86AudioRaiseVolume", 0);
+    }
+    if res == "c=" {
+        let _res = xdo.send_keysequence("F8", 0);
+    }
+    if res == "c0" {
+        let _res = xdo.send_keysequence("super", 0);
+    }
+    if res == "ch" {
+        let _res = xdo.send_keysequence("super+shift+Tab", 0);
+    }
+    if res == "ct" {
+        let _res = xdo.send_keysequence("super+Tab", 0);
+    }
+    if res == "c1" {
+        let _res = xdo.send_keysequence("Tab", 0);
+    }
+    if res == "c3" {
+        let _res = xdo.send_keysequence("m", 0);
+    }
+    if res == "c2" {
+        let _res = xdo.send_keysequence("Up", 0);
+    }
+    if res == "c8" {
+        let _res = xdo.send_keysequence("Down", 0);
+    }
+    if res == "c4" {
+        let _res = xdo.send_keysequence("Left", 0);
+    }
+    if res == "c6" {
+        let _res = xdo.send_keysequence("Right", 0);
+    }
+    if res == "c5" {
+        let _res = xdo.send_keysequence("Return", 0);
+    }
+    if res == "c7" {
+        let _res = xdo.send_keysequence("BackSpace", 0);
+    }
+}
 
 fn when_vlc(xdo: &XDo, res: &str) {
     if res == "cc" {
@@ -148,10 +277,10 @@ fn when_default(xdo: &XDo, res: &str) {
         let _res = xdo.send_keysequence("super", 0);
     }
     if res == "cp" {
-        let _res = xdo.send_keysequence("super+shift+Tab", 0);
+        let _res = xdo.send_keysequence("Up", 0);
     }
     if res == "cn" {
-        let _res = xdo.send_keysequence("super+Tab", 0);
+        let _res = xdo.send_keysequence("Down", 0);
     }
 
     if res == "c-" {
@@ -165,13 +294,13 @@ fn when_default(xdo: &XDo, res: &str) {
     }
 
     if res == "c<" {
-        let _res = xdo.send_keysequence("ctrl+shift+Tab", 0);
+        let _res = xdo.send_keysequence("Left", 0);
     }
     if res == "c>" {
-        let _res = xdo.send_keysequence("ctrl+Tab", 0);
+        let _res = xdo.send_keysequence("Right", 0);
     }
     if res == "c#" {
-        let _res = xdo.send_keysequence("Return", 0);
+        let _res = xdo.send_keysequence("Alt+Tab", 0);
     }
     if res == "c0" {
         let _res = xdo.send_keysequence("super", 0);
@@ -182,20 +311,32 @@ fn when_default(xdo: &XDo, res: &str) {
     if res == "ct" {
         let _res = xdo.send_keysequence("super+Tab", 0);
     }
-    if res == "c2" {
-        let _res = xdo.send_keysequence("Up", 0);
+    if res == "c1" {
+        let _res = xdo.send_keysequence("super+1", 0);
     }
-    if res == "c8" {
-        let _res = xdo.send_keysequence("Down", 0);
+    if res == "c2" {
+        let _res = xdo.send_keysequence("super+2", 0);
+    }
+    if res == "c3" {
+        let _res = xdo.send_keysequence("super+3", 0);
     }
     if res == "c4" {
-        let _res = xdo.send_keysequence("Left", 0);
-    }
-    if res == "c6" {
-        let _res = xdo.send_keysequence("Right", 0);
+        let _res = xdo.send_keysequence("super+4", 0);
     }
     if res == "c5" {
-        let _res = xdo.send_keysequence("Return", 0);
+        let _res = xdo.send_keysequence("super+5", 0);
+    }
+    if res == "c6" {
+        let _res = xdo.send_keysequence("super+6", 0);
+    }
+    if res == "c7" {
+        let _res = xdo.send_keysequence("super+7", 0);
+    }
+    if res == "c8" {
+        let _res = xdo.send_keysequence("super+8", 0);
+    }
+    if res == "c9" {
+        let _res = xdo.send_keysequence("super+9", 0);
     }
 }
 
@@ -217,7 +358,11 @@ fn interact<T: SerialPort>(port: &mut T) -> serial::Result<()> {
                     if let Ok(window) = xdo.get_window_name() {
                         println!("{}", res);
                         println!("{}", window);
-                        if window.contains("YouTube") {
+                        if window == "Kodi" {
+                            when_kodi(&xdo, &res);
+                        } else if window.contains("YouTube on TV") {
+                            when_youtube_tv(&xdo, &res);
+                        } else if window.contains("YouTube") {
                             when_youtube(&xdo, &res);
                         } else if window.contains("VLC") {
                             when_vlc(&xdo, &res);
